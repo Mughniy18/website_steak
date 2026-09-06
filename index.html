@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILLION$ $TEAK - Street Grill Five Star Thrill</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Montserrat & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandYellow: '#FACC15',
+                        brandYellowDark: '#EAB308',
+                        brandRed: '#DC2626',
+                        brandDark: '#121212',
+                        brandCard: '#1E1E1E'
+                    },
+                    fontFamily: {
+                        header: ['Montserrat', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Jarak antara logo gambar dan teks */
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 50px; /* Sesuaikan tinggi logo gambar */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #ffd700; /* Warna kuning emas accent */
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 0.65rem;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #F3F4F6;
+        }
+        .yellow-glow {
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.25);
+        }
+        .yellow-border-glow:hover {
+            box-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandYellow selection:text-black">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-brandDark/95 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand Name -->
+                <a href="#" class="logo-brand">
+    <img src="logo.png" alt="MILLION$ $TEAK Logo" class="logo-img">
+    <div class="logo-text-group">
+        <span class="logo-main">MILLION$ $TEAK</span>
+        <span class="logo-sub">STREET GRILL FIVE STAR THRILL</span>
+    </div>
+</a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                    <a href="#about" class="text-zinc-300 hover:text-brandYellow transition">Tentang Kami</a>
+                    <a href="#menu" class="text-zinc-300 hover:text-brandYellow transition">Daftar Menu</a>
+                    <a href="#reviews" class="text-zinc-300 hover:text-brandYellow transition">Ulasan (4.9★)</a>
+                    <a href="#location" class="text-zinc-300 hover:text-brandYellow transition">Lokasi & Jam</a>
+                </div>
+
+                <!-- Call To Action Button & Social Links -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="https://instagram.com/millionssteak" target="_blank" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-white hover:text-brandYellow transition" title="Instagram @millionssteak">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </a>
+                    <a href="https://tiktok.com/@millionssteak" target="_blank" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-white hover:text-brandYellow transition" title="TikTok @millionssteak">
+                        <i class="fa-brands fa-tiktok text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6285646538658" target="_blank" class="bg-brandYellow hover:bg-brandYellowDark text-black px-5 py-2.5 rounded-full font-bold text-sm shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2 ml-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Pesan Online
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-zinc-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandCard border-b border-zinc-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block text-zinc-300 hover:text-brandYellow font-medium py-2">Tentang Kami</a>
+            <a href="#menu" class="block text-zinc-300 hover:text-brandYellow font-medium py-2">Daftar Menu</a>
+            <a href="#reviews" class="block text-zinc-300 hover:text-brandYellow font-medium py-2">Ulasan (4.9★)</a>
+            <a href="#location" class="block text-zinc-300 hover:text-brandYellow font-medium py-2">Lokasi & Jam</a>
+            <div class="flex items-center gap-3 pt-2">
+                <a href="https://instagram.com/millionssteak" target="_blank" class="flex-1 bg-zinc-800 text-white py-2 rounded-xl text-center text-xs font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-instagram text-brandYellow"></i> @millionssteak
+                </a>
+                <a href="https://tiktok.com/@millionssteak" target="_blank" class="flex-1 bg-zinc-800 text-white py-2 rounded-xl text-center text-xs font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-tiktok text-brandYellow"></i> @millionssteak
+                </a>
+            </div>
+            <a href="https://wa.me/6285646538658" target="_blank" class="w-full bg-brandYellow hover:bg-brandYellowDark text-black py-3 rounded-xl font-bold text-center block shadow-md mt-3">
+                <i class="fa-brands fa-whatsapp text-lg mr-1"></i> Pesan Online via WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Background Gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-yellow-500/10 via-transparent to-brandDark pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-zinc-800/80 border border-brandYellow/30 px-4 py-1.5 rounded-full text-brandYellow text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-star text-brandYellow"></i> Rating 4.9 di Google Maps (14 Ulasan)
+                    </div>
+                    
+                    <h1 class="font-header text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-none">
+                        RASA BINTANG LIMA, <br>
+                        <span class="text-brandYellow">HARGA MERAKYAT!</span>
+                    </h1>
+                    
+                    <p class="text-zinc-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Pilihan Steak Daging Australia & Meltique berkualitas tinggi yang super empuk, juicy, dan tidak bikin risih di tenggorokan. Nikmati sensasi street grill terbaik di Kelapa Dua, Tangerang!
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-2.5 pt-2 text-xs font-semibold text-zinc-300">
+                        <span class="bg-zinc-800/90 px-3 py-1.5 rounded-lg border border-zinc-700/60 flex items-center gap-1.5">
+                            <i class="fa-solid fa-utensils text-brandYellow"></i> Makan di tempat
+                        </span>
+                        <span class="bg-zinc-800/90 px-3 py-1.5 rounded-lg border border-zinc-700/60 flex items-center gap-1.5">
+                            <i class="fa-solid fa-bag-shopping text-brandYellow"></i> Bawa pulang
+                        </span>
+                        <span class="bg-zinc-800/90 px-3 py-1.5 rounded-lg border border-zinc-700/60 flex items-center gap-1.5">
+                            <i class="fa-solid fa-fire text-brandYellow"></i> Free Refill Saus 1x
+                        </span>
+                        <span class="bg-zinc-800/90 px-3 py-1.5 rounded-lg border border-zinc-700/60 flex items-center gap-1.5">
+                            <i class="fa-solid fa-bullhorn text-brandYellow"></i> Terima Panggilan Acara
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#menu" class="bg-brandYellow hover:bg-brandYellowDark text-black px-8 py-4 rounded-xl font-extrabold text-center shadow-lg transition transform hover:-translate-y-1 yellow-glow">
+                            Lihat Menu Penuh & Promo
+                        </a>
+                        <a href="https://maps.google.com/?q=QJ9H+8CH,+Jl.+Klp.+Gading+Bar.,+Pakulonan+Barat,+Kecamatan+Kelapa+Dua,+Kabupaten+Tangerang,+Banten+15810" target="_blank" class="bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700 px-8 py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brandRed"></i> Petunjuk Rute
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Booth Representation -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md bg-gradient-to-b from-brandCard to-zinc-900 border border-brandYellow/40 rounded-3xl p-6 yellow-glow">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brandYellow text-black px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
+                            Unique Motor-Booth Station
+                        </div>
+                        
+                        <!-- Illustration / Logo Graphic -->
+                        <div class="bg-black/80 rounded-2xl p-5 my-2 text-center border border-zinc-800">
+                            <div class="py-4 flex flex-col items-center justify-center">
+                                <div class="w-20 h-20 bg-brandYellow/10 border-2 border-brandYellow rounded-2xl flex items-center justify-center mb-3 text-brandYellow text-4xl shadow-inner">
+                                    <i class="fa-solid fa-motorcycle"></i>
+                                </div>
+                                <h3 class="font-header font-black text-2xl text-brandYellow tracking-wide">MILLION$ $TEAK</h3>
+                                <p class="text-[11px] text-zinc-400 font-bold uppercase tracking-widest mt-1">Street Grill Five Star Thrill</p>
+                            </div>
+                        </div>
+
+                        <!-- Mini Business Info Card -->
+                        <div class="space-y-3 pt-2 text-sm">
+                            <div class="flex items-center justify-between border-b border-zinc-800 pb-2">
+                                <span class="text-zinc-400"><i class="fa-regular fa-clock mr-2 text-brandYellow"></i> Jam Buka:</span>
+                                <span class="text-emerald-400 font-bold bg-emerald-950/60 border border-emerald-800 px-2.5 py-0.5 rounded-full text-xs">
+                                    17.00 – 00.00 WIB
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-zinc-800 pb-2">
+                                <span class="text-zinc-400"><i class="fa-solid fa-tag mr-2 text-brandYellow"></i> Kisaran Harga:</span>
+                                <span class="font-bold text-white">Rp 15K – 146K</span>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-zinc-800 pb-2">
+                                <span class="text-zinc-400"><i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> Order WhatsApp:</span>
+                                <a href="https://wa.me/6285646538658" target="_blank" class="font-bold text-brandYellow hover:underline">0856-4653-8658</a>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-zinc-400"><i class="fa-solid fa-share-nodes mr-2 text-brandYellow"></i> Media Sosial:</span>
+                                <div class="flex items-center gap-3 text-white font-semibold text-xs">
+                                    <a href="https://instagram.com/millionssteak" target="_blank" class="hover:text-brandYellow"><i class="fa-brands fa-instagram text-sm mr-1"></i>IG</a>
+                                    <a href="https://tiktok.com/@millionssteak" target="_blank" class="hover:text-brandYellow"><i class="fa-brands fa-tiktok text-sm mr-1"></i>TikTok</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brandYellow font-bold text-xs uppercase tracking-widest block mb-1">Daftar Menu Resmi</span>
+                <h2 class="text-white font-header text-3xl sm:text-4xl font-extrabold uppercase tracking-wide">Pilihan Menu MILLION$ $TEAK</h2>
+                <p class="text-zinc-400 mt-2 text-sm sm:text-base">Dipanggang fresh saat diorder dengan pilihan Saus Mushroom, Blackpepper, atau BBQ.</p>
+                
+                <!-- Menu Special Banner Notes -->
+                <div class="mt-6 inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-brandYellow/10 border border-brandYellow/30 p-3.5 rounded-2xl text-xs font-semibold text-zinc-200">
+                    <span><i class="fa-solid fa-circle-check text-brandYellow mr-1"></i> Free refill saus 1x (Makan di tempat)</span>
+                    <span class="hidden sm:inline text-zinc-600">|</span>
+                    <span><i class="fa-solid fa-box text-brandYellow mr-1"></i> Take away dikenakan biaya packing 2K</span>
+                </div>
+            </div>
+
+            <!-- MENU CATEGORIES GRID -->
+            <div class="space-y-12">
+
+                <!-- CATEGORY 1: RECOMMENDATION (MELTIQUE 200g) -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-8 bg-brandYellow rounded-full"></div>
+                        <h3 class="font-header font-black text-2xl text-white">RECOMMENDATION (MELTIQUE 200g)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Item -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex justify-between items-center">
+                            <div>
+                                <span class="text-xs bg-brandYellow/20 text-brandYellow font-extrabold px-2.5 py-0.5 rounded-full border border-brandYellow/30 mb-2 inline-block">MOST POPULAR</span>
+                                <h4 class="font-header font-bold text-xl text-white">Tenderloin Meltique (200g)</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Daging Tenderloin Meltique super empuk dan juicy di mulut.</p>
+                            </div>
+                            <div class="text-right pl-4">
+                                <span class="text-zinc-500 line-through text-xs block">87K</span>
+                                <span class="font-header font-extrabold text-2xl text-brandYellow">75K</span>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Tenderloin%20Meltique%20200g" target="_blank" class="mt-2 bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold block transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex justify-between items-center">
+                            <div>
+                                <span class="text-xs bg-brandYellow/20 text-brandYellow font-extrabold px-2.5 py-0.5 rounded-full border border-brandYellow/30 mb-2 inline-block">RECOMMENDED</span>
+                                <h4 class="font-header font-bold text-xl text-white">Sirloin Meltique (200g)</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Daging Sirloin Meltique lembut kaya cita rasa smoky khas grill.</p>
+                            </div>
+                            <div class="text-right pl-4">
+                                <span class="text-zinc-500 line-through text-xs block">88K</span>
+                                <span class="font-header font-extrabold text-2xl text-brandYellow">78K</span>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Sirloin%20Meltique%20200g" target="_blank" class="mt-2 bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold block transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: SPECIAL MELTIQUE -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-8 bg-brandYellow rounded-full"></div>
+                        <h3 class="font-header font-black text-2xl text-white">SPECIAL MELTIQUE</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex justify-between items-center">
+                            <div>
+                                <h4 class="font-header font-bold text-lg text-white">Underrated (100g)</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Porsi hemat rasa bintang lima mulai dari 30 ribuan.</p>
+                            </div>
+                            <div class="text-right pl-4">
+                                <span class="text-zinc-500 line-through text-xs block">40K</span>
+                                <span class="font-header font-extrabold text-2xl text-brandYellow">30K</span>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Special%20Meltique%20Underrated%20100g" target="_blank" class="mt-2 bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold block transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex justify-between items-center">
+                            <div>
+                                <h4 class="font-header font-bold text-lg text-white">Overrated (200g)</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Potongan Meltique spesial porsi puas 200 gram.</p>
+                            </div>
+                            <div class="text-right pl-4">
+                                <span class="text-zinc-500 line-through text-xs block">80K</span>
+                                <span class="font-header font-extrabold text-2xl text-brandYellow">69K</span>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Special%20Meltique%20Overrated%20200g" target="_blank" class="mt-2 bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold block transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: SELECTION CUT & DOUBLE CUTS -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-8 bg-brandYellow rounded-full"></div>
+                        <h3 class="font-header font-black text-2xl text-white">SELECTION CUT & DOUBLE MEAT</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Selection Cut Single -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] bg-zinc-800 text-zinc-400 font-bold px-2 py-0.5 rounded mb-2 inline-block">SELECTION CUT</span>
+                                <h4 class="font-header font-bold text-lg text-white">Sirloin</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Daging Sirloin Australia segar dengan balutan lemak gurih.</p>
+                            </div>
+                            <div class="text-right pt-4 border-t border-zinc-800/80 mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-zinc-500 line-through text-xs block text-left">85K</span>
+                                    <span class="font-header font-bold text-xl text-brandYellow">73K</span>
+                                </div>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Selection%20Cut%20Sirloin" target="_blank" class="bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] bg-zinc-800 text-zinc-400 font-bold px-2 py-0.5 rounded mb-2 inline-block">SELECTION CUT</span>
+                                <h4 class="font-header font-bold text-lg text-white">Ribeye</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Potongan Ribeye berkualitas tinggi super gurih & empuk.</p>
+                            </div>
+                            <div class="text-right pt-4 border-t border-zinc-800/80 mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-zinc-500 line-through text-xs block text-left">88K</span>
+                                    <span class="font-header font-bold text-xl text-brandYellow">79K</span>
+                                </div>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Selection%20Cut%20Ribeye" target="_blank" class="bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Double Meltique Tenderloin -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] bg-red-900/60 text-red-300 border border-red-800 font-bold px-2 py-0.5 rounded mb-2 inline-block">MELTIQUE DOUBLE</span>
+                                <h4 class="font-header font-bold text-lg text-white">Tenderloin Double</h4>
+                                <p class="text-zinc-400 text-xs mt-1">2x porsi Tenderloin Meltique melimpah untuk pencinta steak sejati.</p>
+                            </div>
+                            <div class="text-right pt-4 border-t border-zinc-800/80 mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-zinc-500 line-through text-xs block text-left">168K</span>
+                                    <span class="font-header font-bold text-xl text-brandYellow">138K</span>
+                                </div>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Meltique%20Double%20Tenderloin" target="_blank" class="bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Double Meltique Sirloin -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] bg-red-900/60 text-red-300 border border-red-800 font-bold px-2 py-0.5 rounded mb-2 inline-block">MELTIQUE DOUBLE</span>
+                                <h4 class="font-header font-bold text-lg text-white">Sirloin Double</h4>
+                                <p class="text-zinc-400 text-xs mt-1">2x porsi Sirloin Meltique dengan aroma panggangan melimpah.</p>
+                            </div>
+                            <div class="text-right pt-4 border-t border-zinc-800/80 mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-zinc-500 line-through text-xs block text-left">178K</span>
+                                    <span class="font-header font-bold text-xl text-brandYellow">145K</span>
+                                </div>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Meltique%20Double%20Sirloin" target="_blank" class="bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Double Meltique Overrated -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] bg-red-900/60 text-red-300 border border-red-800 font-bold px-2 py-0.5 rounded mb-2 inline-block">MELTIQUE DOUBLE</span>
+                                <h4 class="font-header font-bold text-lg text-white">Overrated Double</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Double porsi Overrated Meltique yang sangat mantap.</p>
+                            </div>
+                            <div class="text-right pt-4 border-t border-zinc-800/80 mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-zinc-500 line-through text-xs block text-left">160K</span>
+                                    <span class="font-header font-bold text-xl text-brandYellow">130K</span>
+                                </div>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Meltique%20Double%20Overrated" target="_blank" class="bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Selection Cut Double Sirloin -->
+                        <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 hover:border-brandYellow transition yellow-border-glow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] bg-zinc-800 text-zinc-300 font-bold px-2 py-0.5 rounded mb-2 inline-block">SELECTION DOUBLE</span>
+                                <h4 class="font-header font-bold text-lg text-white">Sirloin Double Cut</h4>
+                                <p class="text-zinc-400 text-xs mt-1">Dua porsi Sirloin Australia khas street grill.</p>
+                            </div>
+                            <div class="text-right pt-4 border-t border-zinc-800/80 mt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-zinc-500 line-through text-xs block text-left">150K</span>
+                                    <span class="font-header font-bold text-xl text-brandYellow">135K</span>
+                                </div>
+                                <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20mau%20pesan%20Selection%20Cut%20Double%20Sirloin" target="_blank" class="bg-zinc-800 hover:bg-brandYellow hover:text-black text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                                    <i class="fa-brands fa-whatsapp mr-1"></i>Pesan
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4: OTHERS, DRINKS & SAUCES -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    
+                    <!-- Others & Chicken -->
+                    <div class="lg:col-span-6 bg-brandCard p-6 rounded-2xl border border-zinc-800 space-y-4">
+                        <div class="flex items-center gap-2 border-b border-zinc-800 pb-3">
+                            <i class="fa-solid fa-utensils text-brandYellow"></i>
+                            <h3 class="font-header font-bold text-xl text-white">OTHERS & SIDES</h3>
+                        </div>
+                        
+                        <div class="flex justify-between items-center py-2 border-b border-zinc-800/60">
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Chicken (+-200gr)</h5>
+                                <p class="text-xs text-zinc-400">Dada ayam panggang empuk berbumbu smoky</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-zinc-500 line-through text-xs mr-1">50K</span>
+                                <span class="text-brandYellow font-bold text-lg">35K</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center py-2 border-b border-zinc-800/60">
+                            <div>
+                                <h5 class="font-bold text-white text-sm">French Fries</h5>
+                                <p class="text-xs text-zinc-400">Kentang goreng renyah bumbu gurih</p>
+                            </div>
+                            <span class="text-brandYellow font-bold text-lg">15K</span>
+                        </div>
+
+                        <div class="flex justify-between items-center py-2">
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Buncis</h5>
+                                <p class="text-xs text-zinc-400">Sayuran buncis saute segar pendamping steak</p>
+                            </div>
+                            <span class="text-brandYellow font-bold text-lg">15K</span>
+                        </div>
+                    </div>
+
+                    <!-- Drinks & Extra -->
+                    <div class="lg:col-span-6 bg-brandCard p-6 rounded-2xl border border-zinc-800 space-y-4">
+                        <div class="flex items-center gap-2 border-b border-zinc-800 pb-3">
+                            <i class="fa-solid fa-bottle-water text-brandYellow"></i>
+                            <h3 class="font-header font-bold text-xl text-white">DRINKS & EXTRAS</h3>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="space-y-2">
+                                <div class="flex justify-between border-b border-zinc-800/60 pb-1.5">
+                                    <span class="text-zinc-300 text-xs">Air Botol 600ml</span>
+                                    <span class="font-bold text-brandYellow">5K</span>
+                                </div>
+                                <div class="flex justify-between border-b border-zinc-800/60 pb-1.5">
+                                    <span class="text-zinc-300 text-xs">Teh Pucuk 350ml</span>
+                                    <span class="font-bold text-brandYellow">6K</span>
+                                </div>
+                                <div class="flex justify-between border-b border-zinc-800/60 pb-1.5">
+                                    <span class="text-zinc-300 text-xs">Teh Botol Sosro</span>
+                                    <span class="font-bold text-brandYellow">6K</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-zinc-300 text-xs">Tebs 300ml</span>
+                                    <span class="font-bold text-brandYellow">7K</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 border-l border-zinc-800 pl-4">
+                                <div class="text-xs font-bold text-white uppercase tracking-wider mb-1 text-brandYellow">Pilihan Saus:</div>
+                                <div class="text-xs text-zinc-300">• Mushroom</div>
+                                <div class="text-xs text-zinc-300">• Blackpepper</div>
+                                <div class="text-xs text-zinc-300">• BBQ</div>
+                                <div class="pt-2 border-t border-zinc-800 text-xs space-y-1">
+                                    <div class="flex justify-between text-zinc-400"><span>Extra Saus:</span> <span class="font-bold text-brandYellow">5K</span></div>
+                                    <div class="flex justify-between text-zinc-400"><span>Biaya Packing Takeaway:</span> <span class="font-bold text-brandYellow">2K</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-brandCard/40 border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-8">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-brandYellow font-bold text-sm uppercase tracking-widest">Ulasan Pelanggan Google Maps</span>
+                    <h2 class="font-header text-3xl sm:text-4xl font-extrabold text-white">Diakui Pelanggan & Pecinta Steak</h2>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Kepuasan pelanggan adalah prioritas utama kami. Berikut ulasan asli para pengunjung MILLION$ $TEAK di Google Maps.
+                    </p>
+                    <div class="p-6 bg-brandCard rounded-2xl border border-zinc-800 flex items-center gap-6">
+                        <div class="text-center border-r border-zinc-700 pr-6">
+                            <span class="font-header font-black text-5xl text-brandYellow block">4.9</span>
+                            <div class="flex text-brandYellow text-xs my-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-zinc-400">14 Ulasan Google</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-white">Rating 4.9 dari 5.0</p>
+                            <p class="text-xs text-zinc-400 mt-1">Hampir seluruh pengunjung memberikan nilai sempurna Bintang 5!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-4">
+                    <!-- Review Card 1 -->
+                    <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-brandYellow/20 border border-brandYellow text-brandYellow rounded-full flex items-center justify-center font-bold">R</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Rico</h4>
+                                    <span class="text-xs text-zinc-400">Local Guide · 33 ulasan · 28 foto</span>
+                                </div>
+                            </div>
+                            <div class="flex text-brandYellow text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                            "Steak merakyat tapi kualitas selevel restoran, pilihan daging Australia yang bagus, bukan abal2, ada juga pilihan daging Meltique, entah kenapa tidak risih di tenggorokan, top, sukses ya."
+                        </p>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-brandYellow/20 border border-brandYellow text-brandYellow rounded-full flex items-center justify-center font-bold">N</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Nashrudin Fathani</h4>
+                                    <span class="text-xs text-zinc-400">1 ulasan · 1 foto</span>
+                                </div>
+                            </div>
+                            <div class="flex text-brandYellow text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                            "Steak dengan rasa yang wahhhh enaaak bangettt 🤤😚 Pokoknya mantul deh.. Silahkan coba aja kalo gk percaya 😁"
+                        </p>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-brandYellow/20 border border-brandYellow text-brandYellow rounded-full flex items-center justify-center font-bold">S</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Saif El Quds</h4>
+                                    <span class="text-xs text-zinc-400">Local Guide · 9 ulasan · 13 foto</span>
+                                </div>
+                            </div>
+                            <div class="flex text-brandYellow text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                            "Harga sangat terjangkau untuk kalangan kebawah, start dr 30an sudah dpt steak, tenderloin meltiq super mpuk dan juicy lucy!"
+                        </p>
+                    </div>
+
+                    <!-- Review Card 4 -->
+                    <div class="bg-brandCard p-6 rounded-2xl border border-zinc-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-brandYellow/20 border border-brandYellow text-brandYellow rounded-full flex items-center justify-center font-bold"><i class="fa-solid fa-user"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Pengunjung Google Maps</h4>
+                                    <span class="text-xs text-zinc-400">Ulasan Terverifikasi</span>
+                                </div>
+                            </div>
+                            <div class="flex text-brandYellow text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-zinc-300 text-sm italic leading-relaxed">
+                            "Tempat nya nyaman, pelayanan oke, steak nya juga the best, rekomend sih kalau ke Tangerang pasti singgah ke sini lagi ."
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCATION & HOURS SECTION -->
+    <section id="location" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brandCard rounded-3xl border border-zinc-800 overflow-hidden shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Info Left Column -->
+                    <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between space-y-6">
+                        <div>
+                            <span class="text-brandYellow font-bold text-xs uppercase tracking-widest block mb-1">Kunjungi Kedai Kami</span>
+                            <h2 class="font-header text-3xl font-extrabold text-white mb-6">Lokasi & Kontak Usaha</h2>
+
+                            <div class="space-y-5 text-sm">
+                                <div class="flex items-start space-x-3">
+                                    <div class="text-brandRed text-xl mt-0.5"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-white">Alamat Lengkap</h5>
+                                        <p class="text-zinc-300 text-xs mt-1 leading-relaxed">
+                                            Jl. Kelapa Gading Barat, Pakulonan Barat, Kecamatan Kelapa Dua, Kabupaten Tangerang, Banten 15810 <br>
+                                            <span class="text-brandYellow font-semibold">(Samping Baby Love / Kode Plus: QJ9H+8CH)</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="text-brandYellow text-xl mt-0.5"><i class="fa-regular fa-clock"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-white">Jam Operasional</h5>
+                                        <p class="text-zinc-300 text-xs mt-1">
+                                            Buka Setiap Hari: <span class="text-brandYellow font-bold">17.00 - 00.00 WIB</span> (Malam Hari)
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="text-emerald-400 text-xl mt-0.5"><i class="fa-brands fa-whatsapp"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-white">Nomor WhatsApp Utama</h5>
+                                        <p class="text-zinc-300 text-xs mt-1">
+                                            <a href="https://wa.me/6285646538658" target="_blank" class="text-brandYellow hover:underline font-bold text-sm">0856-4653-8658</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="text-brandYellow text-xl mt-0.5"><i class="fa-solid fa-hashtag"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-white">Media Sosial Resmi</h5>
+                                        <div class="flex items-center gap-4 mt-1 text-xs">
+                                            <a href="https://instagram.com/millionssteak" target="_blank" class="text-zinc-300 hover:text-brandYellow font-semibold flex items-center gap-1">
+                                                <i class="fa-brands fa-instagram text-brandYellow"></i> @millionssteak
+                                            </a>
+                                            <a href="https://tiktok.com/@millionssteak" target="_blank" class="text-zinc-300 hover:text-brandYellow font-semibold flex items-center gap-1">
+                                                <i class="fa-brands fa-tiktok text-brandYellow"></i> @millionssteak
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800 space-y-3">
+                            <a href="https://wa.me/6285646538658?text=Halo%20Millions%20Steak,%20saya%20ingin%20bertanya%20mengenai%20menu%20dan%20panggilan%20acara" target="_blank" class="w-full bg-brandYellow hover:bg-brandYellowDark text-black font-extrabold py-3.5 rounded-xl text-center block shadow-md transition">
+                                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Hubungi WhatsApp Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Right Column -->
+                    <div class="lg:col-span-7 bg-zinc-900 min-h-[350px] relative">
+                        <!-- Embedded Google Map -->
+                        <iframe 
+                            class="w-full h-full min-h-[350px] border-0 filter grayscale opacity-80 hover:grayscale-0 transition duration-500"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1234!2d106.6215!3d-6.2415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTQnMjkuNCJTIDEwNsKwMzcnMTcuNCJF!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-900 py-10 text-xs text-zinc-500">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center space-x-2">
+                <span class="font-header font-black text-brandYellow text-sm">MILLION$ $TEAK</span>
+                <span>&copy; 2026. All Rights Reserved.</span>
+            </div>
+            <p>Street Grill Five Star Thrill — Pakulonan Barat, Kelapa Dua, Tangerang</p>
+            <div class="flex items-center gap-4 text-zinc-400">
+                <a href="https://instagram.com/millionssteak" target="_blank" class="hover:text-brandYellow"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="https://tiktok.com/@millionssteak" target="_blank" class="hover:text-brandYellow"><i class="fa-brands fa-tiktok text-lg"></i></a>
+                <a href="https://wa.me/6285646538658" target="_blank" class="hover:text-brandYellow"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
